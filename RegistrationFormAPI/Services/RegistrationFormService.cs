@@ -1,15 +1,21 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using RegistrationFormAPI.Entities;
+using RegistrationFormAPI.Repositories;
 using System.Threading.Tasks;
 
 namespace RegistrationFormAPI.Services
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class RegistrationFormService : ControllerBase
+
+    public class RegistrationFormService
     {
+        private RegistrationFormRepository _registrationFormRepository;
+
+        public RegistrationFormService(RegistrationFormRepository registrationFormRepository)
+        {
+            _registrationFormRepository = registrationFormRepository;
+        }
+        public async Task<Registration> GetAllAsync()
+        {
+            return await _registrationFormRepository.GetRegistrationForm();
+        }
     }
 }

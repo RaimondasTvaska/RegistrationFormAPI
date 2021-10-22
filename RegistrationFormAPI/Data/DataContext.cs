@@ -16,7 +16,10 @@ namespace RegistrationFormAPI.Data
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
+            modelBuilder.Entity<QuestionAnswer>()
+                .HasKey(bc => new { bc.QuestionId, bc.AnswerId });
+            modelBuilder.Entity<Registration>()
+                .HasMany(r => r.QuestionAnswers);
         }
     }
 }
