@@ -20,8 +20,19 @@ namespace RegistrationFormAPI.Repositories
                .Include(r => r.QuestionAnswers)
                .ThenInclude(qa => qa.Question)
                    .ThenInclude(q => q.Assortment)
-               .FirstOrDefaultAsync(r => r.Id == 1);
+               .FirstOrDefaultAsync(r => r.Id == 4);
 
         }
+        //public async Task<Registration> CreateRegistrationForm(Registration registration)
+        //{
+        //    var entity = new Registration()
+        //    {
+        //        Id = registration.Id,
+        //        QuestionAnswers = registration.QuestionAnswers,
+        //    };
+        //    _dataContext.Add(entity);
+        //    await _dataContext.SaveChangesAsync();
+        //    return entity;
+        //}
     }
 }

@@ -21,5 +21,11 @@ namespace RegistrationFormAPI.Controllers
 
             return Ok(await _registrationFormService.GetAllAsync());
         }
+        //[HttpPost]
+        //public async Task<IActionResult> CreateRegistrationForm(Registration registration)
+        //{
+
+        //    return Ok(await _registrationFormService.CreateRegistrationFormAsync(registration));
+        //}
     }
 }

@@ -1,8 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using RegistrationFormAPI.Entities;
 using RegistrationFormAPI.Services;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace RegistrationFormAPI.Controllers
 {
@@ -18,11 +15,11 @@ namespace RegistrationFormAPI.Controllers
             _answerService = answerService;
         }
 
-        [HttpGet]
-        public async Task<ActionResult<List<Answer>>> GetAllAnswers()
-        {
-            return Ok(await _answerService.GetAllAsync());
-        }
+        //[HttpGet]
+        //public async Task<ActionResult<List<Answer>>> GetAllAnswers()
+        //{
+        //    return Ok(await _answerService.GetAllAsync());
+        //}
     }
 
 }

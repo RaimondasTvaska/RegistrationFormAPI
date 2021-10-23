@@ -17,5 +17,12 @@ namespace RegistrationFormAPI.Services
         {
             return await _registrationFormRepository.GetRegistrationForm();
         }
+        //public async Task<Registration> CreateRegistrationFormAsync(Registration registration)
+        //{
+
+
+        //    return await _registrationFormRepository.CreateRegistrationForm(registration);
+
+        //}
     }
 }
